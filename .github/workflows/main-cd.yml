@@ -1,0 +1,36 @@
+name: Production Deployment
+
+# TODO: Condition on CI passing
+on:
+  push:
+    branches: [main]
+
+# Enable action to create JWT for AWS credentials
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-1
+          role-to-assume: ${{ secrets.PROD_DEPLOY_ROLE }}
+          role-session-name: OIDCSession
+
+      - name: Build Docker Image
+        run: |
+          docker build -t personal-website:dev . && \
+          docker save -o personal-website-dev.tar personal-website:dev
+
+      - name: Deploy to S3 Production
+        run: aws s3 cp personal-website/personal-website-dev.tar s3://jjernstrom-s3-prod/personal-website-dev.tar
