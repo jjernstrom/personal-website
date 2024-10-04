@@ -33,4 +33,4 @@ jobs:
           docker save -o personal-website-dev.tar personal-website:dev
 
       - name: Deploy to S3 Production
-        run: aws s3 cp personal-website/personal-website-dev.tar s3://jjernstrom-s3-prod/personal-website-dev.tar
+        run: aws s3 cp personal-website-dev.tar s3://jjernstrom-s3-prod/personal-website-dev.tar
