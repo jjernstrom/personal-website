@@ -11,7 +11,7 @@ export const Article = () => {
   return (
     <Stack gap={20}>
       <NavBar />
-      <div id={params.articleId} style={{ maxWidth: 680, margin: "auto" }}>
+      <div id={params.articleId} style={{ margin: "auto" }}>
         <Container>{article}</Container>
       </div>
     </Stack>
