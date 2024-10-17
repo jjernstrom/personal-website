@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 interface Props {
   title: string;
+  subTitle: string;
   navTitle: string;
   description: string;
   image: string;
@@ -17,19 +18,22 @@ export const ArticleCard = ({
   tag,
 }: Props) => {
   return (
-    <Link to={navTitle}>
-      <Card sx={{ maxWidth: 345 }}>
+    <Link to={navTitle} style={{ textDecoration: "none" }}>
+      <Card sx={{ maxWidth: 345, height: 400 }}>
         <CardMedia sx={{ height: 140 }} image={image} title="" />
         <CardContent>
-          <Typography gutterBottom variant="caption" component="div">
+          <Typography
+            gutterBottom
+            variant="caption"
+            component="div"
+            color="error"
+          >
             {tag}
           </Typography>
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            {description}
-          </Typography>
+          <Typography variant="body2">{description}</Typography>
         </CardContent>
       </Card>
     </Link>
