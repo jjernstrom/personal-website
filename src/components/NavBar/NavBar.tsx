@@ -46,8 +46,8 @@ export const NavBar = () => {
     <header>
       <nav>
         <Container maxWidth="lg">
-          <Stack direction="row" display="flex" flexWrap="wrap">
-            <Stack direction="row" gap={5} display="flex">
+          <Stack direction="row" display="flex" flexWrap="wrap" rowGap={5}>
+            <Stack direction="row" display="flex" flexWrap="wrap" columnGap={5}>
               <Typography
                 variant="h4"
                 color="#ebdbb2"
@@ -59,7 +59,7 @@ export const NavBar = () => {
               <SocialMediaBar />
             </Stack>
             <Stack
-              gap={5}
+              gap={4}
               direction="row"
               justifyContent="right"
               marginLeft="auto"
