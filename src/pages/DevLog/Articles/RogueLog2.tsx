@@ -81,8 +81,8 @@ export const RogueLog2 = () => {
         The first results I got were not correct, but all the same interesting
         in their own right:
       </Typography>
-      <img src={Static2} />
-      <img src={Static3} />
+      <img src={Static2} style={{ width: "100%" }} />
+      <img src={Static3} style={{ width: "100%" }} />
       <Typography>
         These results are essentially random static, because the input vector to
         the perlin noise function is a pair of integers -- so the "frequency" is
