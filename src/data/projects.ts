@@ -1,6 +1,6 @@
-import rogueVivPic from "../assets/AI-rogue-vivarium.png";
-import brownHopePic from "../assets/BrownHope.png";
-import farOutPic from "../assets/FarOut.png";
+import rogueVivPic from "../assets/portfolio/AI-rogue-vivarium.png";
+import brownHopePic from "../assets/portfolio/BrownHope.png";
+import farOutPic from "../assets/portfolio/FarOut.png";
 
 export const projects = [
   {
