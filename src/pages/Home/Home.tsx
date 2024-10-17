@@ -4,11 +4,11 @@ import { Profile } from "../../components/Profile";
 export const Home = () => {
   return (
     <>
-      <title>Jeffrey Jernstrom: Software Engineer</title>
+      <head>
+        <title>JJ: Software Engineer</title>
+      </head>
       <body>
-        <header>
-          <NavBar />
-        </header>
+        <NavBar />
         <main>
           <Profile />
         </main>

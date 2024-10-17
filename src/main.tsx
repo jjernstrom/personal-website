@@ -1,12 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./pages/Home/Home.tsx";
 import { Portfolio } from "./pages/Portfolio/Portfolio.tsx";
 import { DevLog } from "./pages/index.ts";
-import { Article } from "./pages/DevLog/Article.tsx";
+import { Article } from "./pages/Article/Article.tsx";
 import { articleLoader } from "./pages/DevLog/Articles/articleLoader.ts";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { darkTheme } from "./theme.tsx";
+import { Contact } from "./pages/Contact/Contact.tsx";
 
 const router = createBrowserRouter([
   {
@@ -28,10 +30,17 @@ const router = createBrowserRouter([
     element: <Article />,
     loader: articleLoader,
   },
+  {
+    path: "contact",
+    element: <Contact />,
+  },
 ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>
 );
