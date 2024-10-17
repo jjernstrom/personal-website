@@ -15,7 +15,7 @@ export const ArticleTitle = ({ title, subTitle, tag, date, author }: Props) => {
       <Typography color="error" fontFamily="Courier New">
         {tag}
       </Typography>
-      <Typography marginTop={4} variant="h3">
+      <Typography marginTop={2} variant="h3">
         {title}
       </Typography>
       <Typography variant="subtitle1">{subTitle}</Typography>
