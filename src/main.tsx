@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
+import HomePageImg from './assets/portfolio/Personal-Website.png';
 import { Article } from './pages/Article/Article.tsx';
 import { Contact } from './pages/Contact/Contact.tsx';
 import { articleLoader } from './pages/DevLog/Articles/articleLoader.ts';
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: 'contact',
     element: <Contact />,
+  },
+  {
+    path: 'img.png',
+    element: <img src={HomePageImg} />,
   },
 ]);
 
