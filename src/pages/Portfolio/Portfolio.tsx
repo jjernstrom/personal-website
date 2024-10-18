@@ -1,9 +1,9 @@
-import { NavBar } from "../../components/NavBar";
 //import { Carousel } from "../../components/Carousel";
-import { Container, Stack, Typography } from "@mui/material";
-import { ProjectCard } from "../../components/ProjectCard";
-import { projects } from "../../data/projects";
-import PersonalWebsiteImage from "../../assets/portfolio/Personal-Website.png";
+import { Container, Stack, Typography } from '@mui/material';
+import PersonalWebsiteImage from '../../assets/portfolio/Personal-Website.png';
+import { NavBar } from '../../components/NavBar';
+import { ProjectCard } from '../../components/ProjectCard';
+import { projects } from '../../data/projects';
 
 export const Portfolio = () => {
   return (
@@ -16,12 +16,7 @@ export const Portfolio = () => {
             <Typography variant="h3" marginTop={4} marginBottom={2}>
               Portfolio
             </Typography>
-            <Stack
-              direction="row"
-              gap={4}
-              flexWrap="wrap"
-              justifyContent="center"
-            >
+            <Stack direction="row" gap={4} flexWrap="wrap" justifyContent="center">
               <ProjectCard
                 title={projects[0].title}
                 tag="Game"

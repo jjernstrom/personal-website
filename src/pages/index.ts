@@ -1,3 +1,3 @@
-export * from "./Home";
-export * from "./Portfolio";
-export * from "./DevLog";
+export * from './Home';
+export * from './Portfolio';
+export * from './DevLog';

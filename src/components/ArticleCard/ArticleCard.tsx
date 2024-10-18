@@ -1,5 +1,5 @@
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 
 interface Props {
   title: string;
@@ -10,24 +10,13 @@ interface Props {
   tag: string;
 }
 
-export const ArticleCard = ({
-  title,
-  navTitle,
-  description,
-  image,
-  tag,
-}: Props) => {
+export const ArticleCard = ({ title, navTitle, description, image, tag }: Props) => {
   return (
-    <Link to={navTitle} style={{ textDecoration: "none" }}>
+    <Link to={navTitle} style={{ textDecoration: 'none' }}>
       <Card sx={{ maxWidth: 345, height: 400 }}>
         <CardMedia sx={{ height: 140 }} image={image} title="" />
         <CardContent>
-          <Typography
-            gutterBottom
-            variant="caption"
-            component="div"
-            color="error"
-          >
+          <Typography gutterBottom variant="caption" component="div" color="error">
             {tag}
           </Typography>
           <Typography gutterBottom variant="h5" component="div">

@@ -1,1 +1,1 @@
-export * from "./useCarouselTimer";
+export * from './useCarouselTimer';

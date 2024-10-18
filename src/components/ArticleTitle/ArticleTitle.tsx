@@ -1,5 +1,5 @@
-import { Stack, Typography } from "@mui/material";
-import { ShareToolbar } from "../../pages/DevLog/Articles/RogueLog1";
+import { Stack, Typography } from '@mui/material';
+import { ShareToolbar } from '../../pages/DevLog/Articles/RogueLog1';
 
 interface Props {
   title: string;
@@ -19,7 +19,7 @@ export const ArticleTitle = ({ title, subTitle, tag, date, author }: Props) => {
         {title}
       </Typography>
       <Typography variant="subtitle1">{subTitle}</Typography>
-      <hr style={{ width: "100%", marginBottom: 0 }} />
+      <hr style={{ width: '100%', marginBottom: 0 }} />
       <Stack direction="row" display="flex">
         <Typography fontFamily="Courier New" variant="caption">
           {author}
@@ -28,15 +28,15 @@ export const ArticleTitle = ({ title, subTitle, tag, date, author }: Props) => {
         </Typography>
         <div
           style={{
-            marginLeft: "auto",
-            marginTop: "auto",
-            marginBottom: "auto",
+            marginLeft: 'auto',
+            marginTop: 'auto',
+            marginBottom: 'auto',
           }}
         >
           <ShareToolbar />
         </div>
       </Stack>
-      <hr style={{ width: "100%", marginTop: 0 }} />
+      <hr style={{ width: '100%', marginTop: 0 }} />
     </Stack>
   );
 };

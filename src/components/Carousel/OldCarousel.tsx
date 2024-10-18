@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { projects } from "../../data/projects";
+import { useEffect, useRef, useState } from 'react';
+import { projects } from '../../data/projects';
 
 // TODO: Leaving this here for study of how I misunderstood useEffect and setInterval
 
@@ -70,9 +70,7 @@ export const Carousel = () => {
           <a href="http://www.jjernstrom.com">Play</a>
         </h2>
         <h2>
-          <a href="https://github.com/jjernstrom/rogue-vivarium">
-            View Project on GitHub
-          </a>
+          <a href="https://github.com/jjernstrom/rogue-vivarium">View Project on GitHub</a>
         </h2>
       </div>
       <img src={catalogue[catalogueIndex].image} width={500} height={500} />

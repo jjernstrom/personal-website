@@ -1,7 +1,7 @@
-import { Container, Stack } from "@mui/material";
-import { NavBar } from "../../components/NavBar";
-import { useLoaderData, useParams } from "react-router-dom";
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
+import { Container, Stack } from '@mui/material';
+import { NavBar } from '../../components/NavBar';
 
 export const Article = () => {
   const params = useParams();
@@ -10,9 +10,7 @@ export const Article = () => {
   return (
     <Stack gap={8}>
       <NavBar />
-      <Container
-        sx={{ id: params.articleId, display: "flex", justifyContent: "center" }}
-      >
+      <Container sx={{ id: params.articleId, display: 'flex', justifyContent: 'center' }}>
         {article}
       </Container>
     </Stack>
