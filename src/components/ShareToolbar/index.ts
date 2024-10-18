@@ -1,1 +1,1 @@
-export * from "./ShareToolbar";
+export * from './ShareToolbar';

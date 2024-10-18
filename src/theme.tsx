@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
 export const Spacing = {
   navBar: 1600,
@@ -7,36 +7,36 @@ export const Spacing = {
 
 export const darkTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: 'dark',
     primary: {
-      main: "#458588",
-      light: "#83a598",
+      main: '#458588',
+      light: '#83a598',
     },
     secondary: {
-      main: "#fb4934",
-      dark: "#cc241d",
+      main: '#fb4934',
+      dark: '#cc241d',
     },
     background: {
-      default: "#282828",
+      default: '#282828',
     },
     text: {
-      primary: "#ebdbb2",
+      primary: '#ebdbb2',
     },
     error: {
-      main: "#fb4934",
-      dark: "#cc241d",
+      main: '#fb4934',
+      dark: '#cc241d',
     },
     warning: {
-      main: "#fabd2f",
-      dark: "#d79921",
+      main: '#fabd2f',
+      dark: '#d79921',
     },
     info: {
-      main: "#83a598",
-      dark: "#458588",
+      main: '#83a598',
+      dark: '#458588',
     },
     success: {
-      main: "#b8bb26",
-      dark: "#98971a",
+      main: '#b8bb26',
+      dark: '#98971a',
     },
   },
   typography: {
@@ -46,7 +46,7 @@ export const darkTheme = createTheme({
   components: {
     MuiLink: {
       defaultProps: {
-        underline: "none",
+        underline: 'none',
       },
     },
   },

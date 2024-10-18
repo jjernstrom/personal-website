@@ -1,42 +1,42 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home } from "./pages/Home/Home.tsx";
-import { Portfolio } from "./pages/Portfolio/Portfolio.tsx";
-import { DevLog } from "./pages/index.ts";
-import { Article } from "./pages/Article/Article.tsx";
-import { articleLoader } from "./pages/DevLog/Articles/articleLoader.ts";
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import { darkTheme } from "./theme.tsx";
-import { Contact } from "./pages/Contact/Contact.tsx";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { Article } from './pages/Article/Article.tsx';
+import { Contact } from './pages/Contact/Contact.tsx';
+import { articleLoader } from './pages/DevLog/Articles/articleLoader.ts';
+import { Home } from './pages/Home/Home.tsx';
+import { Portfolio } from './pages/Portfolio/Portfolio.tsx';
+import { DevLog } from './pages/index.ts';
+import { darkTheme } from './theme.tsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Home />,
   },
   {
-    path: "portfolio",
+    path: 'portfolio',
     element: <Portfolio />,
   },
   {
-    path: "devlog",
+    path: 'devlog',
     element: <DevLog />,
   },
   {
     // TODO: why is articleId not typed anywhere?
     // maybe string interp articleId from enum or type?
-    path: "devlog/:articleId",
+    path: 'devlog/:articleId',
     element: <Article />,
     loader: articleLoader,
   },
   {
-    path: "contact",
+    path: 'contact',
     element: <Contact />,
   },
 ]);
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />

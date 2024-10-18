@@ -1,10 +1,6 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-export const useCarouselTimer = (
-  isPlaying: boolean,
-  update: () => void,
-  intervalInMillis: number
-) => {
+export const useCarouselTimer = (isPlaying: boolean, update: () => void, intervalInMillis: number) => {
   useEffect(() => {
     let interval: number | undefined = undefined;
 

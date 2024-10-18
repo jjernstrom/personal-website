@@ -1,5 +1,5 @@
-import { LoaderFunctionArgs } from "react-router-dom";
-import { getArticle } from "./getArticle";
+import { LoaderFunctionArgs } from 'react-router-dom';
+import { getArticle } from './getArticle';
 
 export const articleLoader = async ({ params }: LoaderFunctionArgs) => {
   const articleId = params.articleId;

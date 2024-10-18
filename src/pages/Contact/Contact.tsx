@@ -1,5 +1,5 @@
-import { Container, Typography } from "@mui/material";
-import { NavBar } from "../../components/NavBar";
+import { Container, Typography } from '@mui/material';
+import { NavBar } from '../../components/NavBar';
 
 export const Contact = () => {
   return (
